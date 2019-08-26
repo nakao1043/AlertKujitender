@@ -4,8 +4,8 @@ import asyncio
 from datetime import datetime
 import time
 
-# コンフィグファイルの読み込み
-token = 'NjE1NDYwMDAyOTkxMTc3NzUx.XWOjyg.ma67t9A8yfbyvQrrd2D0epdiDak'
+# Tokenの読み込み
+token = 'NjE1NDYwMDAyOTkxMTc3NzUx.XWO-0Q.C-ioGqysBtO-1C_lLCOJHpdwRQs'
 
 # クライアント接続オブジェクト
 client = discord.Client()
@@ -31,15 +31,5 @@ async def on_ready():
         await channel.send('くじテンダー結果発表まであと1時間！')
         time.sleep(3300)
         await channel.send('くじテンダー結果発表まであと5分！')
-
-# メッセージ受信時に動作する処理
-@client.event
-async def on_message(message):
-    # メッセージ送信者がBotだった場合は無視する
-    if message.author.bot:
-        return
-    # 「/neko」と発言したら「にゃーん」が返る処理
-    if message.content == '/neko':
-        await message.channel.send('にゃーん')
 
 client.run(token)

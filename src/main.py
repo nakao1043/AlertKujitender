@@ -32,4 +32,14 @@ async def on_ready():
         time.sleep(3300)
         await channel.send('くじテンダー結果発表まであと5分！')
 
+# メッセージ受信時に動作する処理
+@client.event
+async def on_message(message):
+    # メッセージ送信者がBotだった場合は無視する
+    if message.author.bot:
+        return
+    # 「/neko」と発言したら「にゃーん」が返る処理
+    if message.content == '/neko':
+        await message.channel.send('にゃーん')
+
 client.run(token)

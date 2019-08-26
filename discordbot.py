@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 
 # Tokenの読み込み
-token = 'NjE1NDYwMDAyOTkxMTc3NzUx.XWO-0Q.C-ioGqysBtO-1C_lLCOJHpdwRQs'
+token = 'NjE1NDYwMDAyOTkxMTc3NzUx.XWPEsw.zUkOOWAE821Xh1K8Ea_3RzlXUZk'
 
 # クライアント接続オブジェクト
 client = discord.Client()

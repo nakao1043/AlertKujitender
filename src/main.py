@@ -13,7 +13,7 @@ client = discord.Client()
 # Alert Kujitender 
 @client.event
 async def on_ready():
-    CHANNEL_ID=601765601983332376
+    CHANNEL_ID=615477635715432462
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('AlermBot Awaken!')
     while True:

@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 
 # Tokenの読み込み
-token = 'NjE1NDYwMDAyOTkxMTc3NzUx.XWPEsw.zUkOOWAE821Xh1K8Ea_3RzlXUZk'
+token = 'NjE1NDYwMDAyOTkxMTc3NzUx.XWPKEg.PDxE4C840_Y4ODKnURY9OfoaZmk'
 
 # クライアント接続オブジェクト
 client = discord.Client()
@@ -13,7 +13,7 @@ client = discord.Client()
 # Alert Kujitender 
 @client.event
 async def on_ready():
-    CHANNEL_ID=615477635715432462
+    CHANNEL_ID=601765601983332376
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('AlermBot Awaken!')
     while True:

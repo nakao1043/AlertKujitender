@@ -20,16 +20,22 @@ async def on_ready():
         if datetime.now().weekday() == 5:
             if datetime.now().hour == 20:
                 if datetime.now().minute == 00:
-                    await channel.send('くじテンダー結果発表まであと1時間！')
+                    await channel.send('くじテンダー引き換え期間まであと1時間です。交換してない人は急ぎましょう。')
                     time.sleep(3300)
                     await channel.send('くじテンダー結果発表まであと5分！')
+                    time.sleep(300)
+                    await channel.send('くじテンダーの結果が発表されました！')
                     break
+        print('待機中・・・')
         time.sleep(60)
 
     while True:
-        time.sleep(601500)
-        await channel.send('くじテンダー結果発表まであと1時間！')
+        print('週間待機モードに入ります')
+        time.sleep(601200)
+        await channel.send('くじテンダー引き換え期間まであと1時間です。交換してない人は急ぎましょう。')
         time.sleep(3300)
         await channel.send('くじテンダー結果発表まであと5分！')
-
+        time.sleep(300)
+        await channel.send('くじテンダーの結果が発表されました！')
+        
 client.run(token)
